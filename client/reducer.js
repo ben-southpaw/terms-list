@@ -41,10 +41,6 @@ const INITIAL_STATE = {
     id: 9,
     name: 'Dev for mobile',
     link: 'https://github.com/dev-academy-programme/concepts/blob/master/mobile/debugging.md'
-  }, {
-    id: 10,
-    name: 'for dinner tonight?',
-    link: 'http://www.whatthefuckshouldimakefordinner.com/'
   }]
 }
 

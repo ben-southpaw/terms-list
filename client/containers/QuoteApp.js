@@ -17,7 +17,7 @@ const QuoteApp = React.createClass({
     var component = this;
     $.get('http://api.icndb.com/jokes/random?limitTo=[nerdy]', function(response){
       component.setState({
-        quote: response.value.joke.replace(/&quot;/g,'')
+        quote: response.value.joke.replace(/&quot;/g,''),
         // author: component.authors[Math.floor(Math.random() * component.authors.length)]
       });
     });
