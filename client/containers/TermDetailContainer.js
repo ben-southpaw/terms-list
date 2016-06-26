@@ -1,17 +1,17 @@
 import { connect } from 'react-redux'
 
-import ThingDetail from '../components/ThingDetail'
+import TermDetail from '../components/TermDetail'
 import { hideDetails } from '../actions'
 
 const mapStateToProps = (state) => {
-  const thingDetails = state.things.filter((thing) => {
-    if (thing.id === state.selectedThing) {
-      return thing
+  const termDetails = state.terms.filter((term) => {
+    if (term.id === state.selectedTerm) {
+      return term
     }
   })[0] // there should be only one
 
   return {
-    thing: thingDetails
+    term: termDetails
   }
 }
 
@@ -23,9 +23,9 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-const ThingDetailContainer = connect(
+const TermDetailContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(ThingDetail)
+)(TermDetail)
 
-export default ThingDetailContainer
+export default TermDetailContainer

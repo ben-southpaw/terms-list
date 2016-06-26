@@ -1,44 +1,69 @@
-import { SHOW_DETAILS, HIDE_DETAILS, ADD_THING } from './actions'
+import { SHOW_DETAILS, HIDE_DETAILS } from './actions'
+
+
+
 
 const INITIAL_STATE = {
   selectedThing: null,
-  things: [{
+  terms: [{
     id: 1,
-    name: 'Red thing'
+    name: 'API',
+    link: 'https://github.com/dev-academy-programme/concepts/blob/master/api/intro.md'
+  }, {
+    id: 2,
+    name: 'Git',
+    link: 'https://github.com/dev-academy-programme/curriculum/tree/master/concepts/git-basics'
+  }, {
+    id: 3,
+    name: 'HTML',
+    link: 'https://github.com/dev-academy-programme/curriculum/tree/master/concepts/html-basics-1'
+  }, {
+    id: 4,
+    name: 'JavaScript',
+    link: 'https://github.com/dev-academy-programme/curriculum/tree/master/concepts/js-basics'
+  }, {
+    id: 5,
+    name: 'TDD',
+    link: 'https://github.com/dev-academy-programme/curriculum/tree/master/concepts/test-driven-development'
+  }, {
+    id: 6,
+    name: 'Command Line',
+    link: 'https://github.com/dev-academy-programme/curriculum/tree/master/concepts/command-line-basics'
+  }, {
+    id: 7,
+    name: 'JS Event',
+    link: 'https://github.com/dev-academy-programme/curriculum/tree/master/concepts/events'
+  }, {
+    id: 8,
+    name: 'Process over product',
+    link: 'https://github.com/dev-academy-programme/curriculum/tree/master/concepts/process-over-product'
+  }, {
+    id: 9,
+    name: 'Dev for mobile',
+    link: 'https://github.com/dev-academy-programme/concepts/blob/master/mobile/debugging.md'
+  }, {
+    id: 10,
+    name: 'for dinner tonight?',
+    link: 'http://www.whatthefuckshouldimakefordinner.com/'
   }]
 }
+
+
 
 export default (state = INITIAL_STATE , action) => {
   switch (action.type) {
     case SHOW_DETAILS:
       return Object.assign({}, state, {
-        selectedThing: action.id
+        selectedTerm: action.id
       })
     case HIDE_DETAILS:
       return Object.assign({}, state, {
-        selectedThing: null
+        selectedTerm: null
       })
-    case ADD_THING:
-    // This is an alternative that uses the ES6 spread operator
-    // return Object.assign({}, state, {
-    //   things: [
-    //     ...state.things,
-    //     {
-    //       id: state.things.length + 1,
-    //       name: action.name
-    //     }
-    //   ]
-    // })
 
-      // create copy of existing state
+    //   // create copy of existing state
       const newState = Object.assign({}, state)
-      newState.things = state.things.slice()
-
-      // add new thing
-      newState.things.push({
-        id: state.things.length + 1,
-        name: action.name
-      })
+      newState.terms = state.terms.slice()
 
       return newState
     default:

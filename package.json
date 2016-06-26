@@ -56,6 +56,7 @@
     "body-parser": "^1.15.1",
     "cors": "^2.7.1",
     "express": "^4.13.4",
+    "react-linkify": "^0.1.1",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
     "superagent": "^2.0.0"

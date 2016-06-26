@@ -1,14 +1,16 @@
 import React from 'react'
 
-import ThingListContainer from '../containers/ThingListContainer'
-import ThingDetailContainer from '../containers/ThingDetailContainer'
+import TermListContainer from '../containers/TermlistContainer'
+import TermDetailContainer from '../containers/TermDetailContainer'
+import QuoteApp from '../containers/QuoteApp'
 
 export default () => {
   return (
     <div>
-      <h1>Things</h1>
-      <ThingListContainer />
-      <ThingDetailContainer />
+      <h1>Phase Zero concepts to learn</h1>
+      <TermListContainer />
+      <TermDetailContainer />
+      <QuoteApp />
     </div>
   )
 }
