@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
     if (term.id === state.selectedTerm) {
       return term
     }
-  })[0] // there should be only one
+  })[0] 
 
   return {
     term: termDetails

@@ -6,7 +6,7 @@ import QuoteApp from '../containers/QuoteApp'
 
 export default () => {
   return (
-    <div>
+    <div className="twelve columns">
       <h1>Phase Zero concepts to learn</h1>
       <TermListContainer />
       <TermDetailContainer />

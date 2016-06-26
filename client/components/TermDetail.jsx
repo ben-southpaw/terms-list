@@ -5,7 +5,7 @@ var Linkify = require('react-linkify')
 export default (props) => {
   if (props.term) {
     return (
-      <div>
+      <div className="link">
         <h2>Link</h2>
         <p>{props.term.name}: {' '}
           <Linkify>{props.term.link}</Linkify></p>

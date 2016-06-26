@@ -17,7 +17,3 @@ export function hideDetails () {
     type: HIDE_DETAILS
   }
 }
-
-
-
- 

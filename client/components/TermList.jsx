@@ -2,8 +2,9 @@ import React from 'react'
 
 export default (props) => {
   return (
-    <div>
+    <div className="termslist">
       <h2>List</h2>
+      
       <ul>
         {props.terms.map((term) => {
           return (
